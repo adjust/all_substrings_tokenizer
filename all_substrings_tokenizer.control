@@ -1,0 +1,5 @@
+# all_substrings_tokenizer extension
+comment = 'tokenizes text to all substrings bigger than certain char-length'
+default_version = '0.1'
+module_pathname = '$libdir/all_substrings_tokenizer'
+relocatable = true

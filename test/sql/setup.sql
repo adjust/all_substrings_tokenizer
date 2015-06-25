@@ -1,0 +1,1 @@
+CREATE EXTENSION all_substrings_tokenizer;

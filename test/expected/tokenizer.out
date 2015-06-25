@@ -1,0 +1,219 @@
+SELECT token, char_length(token), round(bit_length(token)/8.0, 0) bytes
+FROM all_substrings_set('abc審defggh!:w^&^*&^£審');
+          token          | char_length | bytes 
+-------------------------+-------------+-------
+ abc                     |           3 |     3
+ abc審                   |           4 |     6
+ abc審d                  |           5 |     7
+ abc審de                 |           6 |     8
+ abc審def                |           7 |     9
+ abc審defg               |           8 |    10
+ abc審defgg              |           9 |    11
+ abc審defggh             |          10 |    12
+ abc審defggh!            |          11 |    13
+ abc審defggh!:           |          12 |    14
+ abc審defggh!:w          |          13 |    15
+ abc審defggh!:w^         |          14 |    16
+ abc審defggh!:w^&        |          15 |    17
+ abc審defggh!:w^&^       |          16 |    18
+ abc審defggh!:w^&^*      |          17 |    19
+ abc審defggh!:w^&^*&     |          18 |    20
+ abc審defggh!:w^&^*&^    |          19 |    21
+ abc審defggh!:w^&^*&^£   |          20 |    23
+ abc審defggh!:w^&^*&^£審 |          21 |    26
+ bc審                    |           3 |     5
+ bc審d                   |           4 |     6
+ bc審de                  |           5 |     7
+ bc審def                 |           6 |     8
+ bc審defg                |           7 |     9
+ bc審defgg               |           8 |    10
+ bc審defggh              |           9 |    11
+ bc審defggh!             |          10 |    12
+ bc審defggh!:            |          11 |    13
+ bc審defggh!:w           |          12 |    14
+ bc審defggh!:w^          |          13 |    15
+ bc審defggh!:w^&         |          14 |    16
+ bc審defggh!:w^&^        |          15 |    17
+ bc審defggh!:w^&^*       |          16 |    18
+ bc審defggh!:w^&^*&      |          17 |    19
+ bc審defggh!:w^&^*&^     |          18 |    20
+ bc審defggh!:w^&^*&^£    |          19 |    22
+ bc審defggh!:w^&^*&^£審  |          20 |    25
+ c審d                    |           3 |     5
+ c審de                   |           4 |     6
+ c審def                  |           5 |     7
+ c審defg                 |           6 |     8
+ c審defgg                |           7 |     9
+ c審defggh               |           8 |    10
+ c審defggh!              |           9 |    11
+ c審defggh!:             |          10 |    12
+ c審defggh!:w            |          11 |    13
+ c審defggh!:w^           |          12 |    14
+ c審defggh!:w^&          |          13 |    15
+ c審defggh!:w^&^         |          14 |    16
+ c審defggh!:w^&^*        |          15 |    17
+ c審defggh!:w^&^*&       |          16 |    18
+ c審defggh!:w^&^*&^      |          17 |    19
+ c審defggh!:w^&^*&^£     |          18 |    21
+ c審defggh!:w^&^*&^£審   |          19 |    24
+ 審de                    |           3 |     5
+ 審def                   |           4 |     6
+ 審defg                  |           5 |     7
+ 審defgg                 |           6 |     8
+ 審defggh                |           7 |     9
+ 審defggh!               |           8 |    10
+ 審defggh!:              |           9 |    11
+ 審defggh!:w             |          10 |    12
+ 審defggh!:w^            |          11 |    13
+ 審defggh!:w^&           |          12 |    14
+ 審defggh!:w^&^          |          13 |    15
+ 審defggh!:w^&^*         |          14 |    16
+ 審defggh!:w^&^*&        |          15 |    17
+ 審defggh!:w^&^*&^       |          16 |    18
+ 審defggh!:w^&^*&^£      |          17 |    20
+ 審defggh!:w^&^*&^£審    |          18 |    23
+ def                     |           3 |     3
+ defg                    |           4 |     4
+ defgg                   |           5 |     5
+ defggh                  |           6 |     6
+ defggh!                 |           7 |     7
+ defggh!:                |           8 |     8
+ defggh!:w               |           9 |     9
+ defggh!:w^              |          10 |    10
+ defggh!:w^&             |          11 |    11
+ defggh!:w^&^            |          12 |    12
+ defggh!:w^&^*           |          13 |    13
+ defggh!:w^&^*&          |          14 |    14
+ defggh!:w^&^*&^         |          15 |    15
+ defggh!:w^&^*&^£        |          16 |    17
+ defggh!:w^&^*&^£審      |          17 |    20
+ efg                     |           3 |     3
+ efgg                    |           4 |     4
+ efggh                   |           5 |     5
+ efggh!                  |           6 |     6
+ efggh!:                 |           7 |     7
+ efggh!:w                |           8 |     8
+ efggh!:w^               |           9 |     9
+ efggh!:w^&              |          10 |    10
+ efggh!:w^&^             |          11 |    11
+ efggh!:w^&^*            |          12 |    12
+ efggh!:w^&^*&           |          13 |    13
+ efggh!:w^&^*&^          |          14 |    14
+ efggh!:w^&^*&^£         |          15 |    16
+ efggh!:w^&^*&^£審       |          16 |    19
+ fgg                     |           3 |     3
+ fggh                    |           4 |     4
+ fggh!                   |           5 |     5
+ fggh!:                  |           6 |     6
+ fggh!:w                 |           7 |     7
+ fggh!:w^                |           8 |     8
+ fggh!:w^&               |           9 |     9
+ fggh!:w^&^              |          10 |    10
+ fggh!:w^&^*             |          11 |    11
+ fggh!:w^&^*&            |          12 |    12
+ fggh!:w^&^*&^           |          13 |    13
+ fggh!:w^&^*&^£          |          14 |    15
+ fggh!:w^&^*&^£審        |          15 |    18
+ ggh                     |           3 |     3
+ ggh!                    |           4 |     4
+ ggh!:                   |           5 |     5
+ ggh!:w                  |           6 |     6
+ ggh!:w^                 |           7 |     7
+ ggh!:w^&                |           8 |     8
+ ggh!:w^&^               |           9 |     9
+ ggh!:w^&^*              |          10 |    10
+ ggh!:w^&^*&             |          11 |    11
+ ggh!:w^&^*&^            |          12 |    12
+ ggh!:w^&^*&^£           |          13 |    14
+ ggh!:w^&^*&^£審         |          14 |    17
+ gh!                     |           3 |     3
+ gh!:                    |           4 |     4
+ gh!:w                   |           5 |     5
+ gh!:w^                  |           6 |     6
+ gh!:w^&                 |           7 |     7
+ gh!:w^&^                |           8 |     8
+ gh!:w^&^*               |           9 |     9
+ gh!:w^&^*&              |          10 |    10
+ gh!:w^&^*&^             |          11 |    11
+ gh!:w^&^*&^£            |          12 |    13
+ gh!:w^&^*&^£審          |          13 |    16
+ h!:                     |           3 |     3
+ h!:w                    |           4 |     4
+ h!:w^                   |           5 |     5
+ h!:w^&                  |           6 |     6
+ h!:w^&^                 |           7 |     7
+ h!:w^&^*                |           8 |     8
+ h!:w^&^*&               |           9 |     9
+ h!:w^&^*&^              |          10 |    10
+ h!:w^&^*&^£             |          11 |    12
+ h!:w^&^*&^£審           |          12 |    15
+ !:w                     |           3 |     3
+ !:w^                    |           4 |     4
+ !:w^&                   |           5 |     5
+ !:w^&^                  |           6 |     6
+ !:w^&^*                 |           7 |     7
+ !:w^&^*&                |           8 |     8
+ !:w^&^*&^               |           9 |     9
+ !:w^&^*&^£              |          10 |    11
+ !:w^&^*&^£審            |          11 |    14
+ :w^                     |           3 |     3
+ :w^&                    |           4 |     4
+ :w^&^                   |           5 |     5
+ :w^&^*                  |           6 |     6
+ :w^&^*&                 |           7 |     7
+ :w^&^*&^                |           8 |     8
+ :w^&^*&^£               |           9 |    10
+ :w^&^*&^£審             |          10 |    13
+ w^&                     |           3 |     3
+ w^&^                    |           4 |     4
+ w^&^*                   |           5 |     5
+ w^&^*&                  |           6 |     6
+ w^&^*&^                 |           7 |     7
+ w^&^*&^£                |           8 |     9
+ w^&^*&^£審              |           9 |    12
+ ^&^                     |           3 |     3
+ ^&^*                    |           4 |     4
+ ^&^*&                   |           5 |     5
+ ^&^*&^                  |           6 |     6
+ ^&^*&^£                 |           7 |     8
+ ^&^*&^£審               |           8 |    11
+ &^*                     |           3 |     3
+ &^*&                    |           4 |     4
+ &^*&^                   |           5 |     5
+ &^*&^£                  |           6 |     7
+ &^*&^£審                |           7 |    10
+ ^*&                     |           3 |     3
+ ^*&^                    |           4 |     4
+ ^*&^£                   |           5 |     6
+ ^*&^£審                 |           6 |     9
+ *&^                     |           3 |     3
+ *&^£                    |           4 |     5
+ *&^£審                  |           5 |     8
+ &^£                     |           3 |     4
+ &^£審                   |           4 |     7
+ ^£審                    |           3 |     6
+(190 rows)
+
+SELECT token FROM all_substrings_set('abc');
+ token 
+-------
+ abc
+(1 row)
+
+SELECT token FROM all_substrings_set('二湖楽');
+ token  
+--------
+ 二湖楽
+(1 row)
+
+SELECT token FROM all_substrings_set('二湖');
+ token 
+-------
+(0 rows)
+
+-- respects min characters in token setting
+SELECT token FROM all_substrings_set('aa');
+ token 
+-------
+(0 rows)
+
