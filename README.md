@@ -1,7 +1,8 @@
 #### All Substrings Tokenizer
 
 This is a PostgreSQL extension that provides functions to extract all substrings
-from a given string.
+from a given string. Currently there's a hard coded limit of 3 characters per
+substring.
 
 It's also worth as an example for writing set-returning functions in C and handling multi-byte characters.
 
